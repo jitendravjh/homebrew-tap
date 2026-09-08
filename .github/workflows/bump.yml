@@ -1,4 +1,4 @@
-name: bump ghwork
+name: bump ghdeck
 
 on:
   schedule:
@@ -18,19 +18,19 @@ jobs:
         id: latest
         env:
           GH_TOKEN: ${{ github.token }}
-        run: echo "tag=$(gh release view --repo jitendravjh/ghwork --json tagName -q .tagName)" >> "$GITHUB_OUTPUT"
+        run: echo "tag=$(gh release view --repo jitendravjh/ghdeck --json tagName -q .tagName)" >> "$GITHUB_OUTPUT"
 
       - name: Rebuild the formula
         run: |
-          bash script/formula.sh "${{ steps.latest.outputs.tag }}" > Formula/ghwork.rb
+          bash script/formula.sh "${{ steps.latest.outputs.tag }}" > Formula/ghdeck.rb
 
       - name: Commit if it changed
         run: |
-          if git diff --quiet Formula/ghwork.rb; then
+          if git diff --quiet Formula/ghdeck.rb; then
             echo "already on ${{ steps.latest.outputs.tag }}"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -q -m "ghwork ${{ steps.latest.outputs.tag }}" Formula/ghwork.rb
+          git commit -q -m "ghdeck ${{ steps.latest.outputs.tag }}" Formula/ghdeck.rb
           git push

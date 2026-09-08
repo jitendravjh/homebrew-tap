@@ -3,10 +3,10 @@
 Homebrew formulae for my tools.
 
 ```sh
-brew install jitendravjh/tap/ghwork
+brew install jitendravjh/tap/ghdeck
 ```
 
-## ghwork
+## ghdeck
 
 All your GitHub work in one list, PRs and issues together sorted by last update.
-Source at [jitendravjh/ghwork](https://github.com/jitendravjh/ghwork).
+Source at [jitendravjh/ghdeck](https://github.com/jitendravjh/ghdeck).
