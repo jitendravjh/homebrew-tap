@@ -1,7 +1,6 @@
 class Ghwork < Formula
   desc "All your GitHub work in one list, PRs and issues together sorted by last update"
   homepage "https://github.com/jitendravjh/ghwork"
-  version "0.1.0"
   license "MIT"
 
   on_macos do
