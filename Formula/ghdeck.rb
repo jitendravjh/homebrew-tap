@@ -5,23 +5,23 @@ class Ghdeck < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.2.1/ghdeck-aarch64-apple-darwin.tar.gz"
-      sha256 "328ee7f764ca61cff2ca8a7a4cae273b1d8277efa2d5377873de6fafefe8557c"
+      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.1.0/ghdeck-aarch64-apple-darwin.tar.gz"
+      sha256 "c58fdad5e0ec4aa2ab6ec5e0659f1d2bc566a6e09fa04998175644f3c3b17978"
     end
     on_intel do
-      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.2.1/ghdeck-x86_64-apple-darwin.tar.gz"
-      sha256 "9471009214e42d18f5bd7751f7cd26c377fac9a8ee1bc9888819f7f0ead80982"
+      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.1.0/ghdeck-x86_64-apple-darwin.tar.gz"
+      sha256 "1d9ff0dc56dbc57ebc537ab834521e88a7e84c62a3a6f0e0d03a7702681dda8a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.2.1/ghdeck-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "99bd3f983bcdea9d1b01550b301ccdbb37e7b0c15ef09697b01befa6ebd5bc42"
+      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.1.0/ghdeck-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "c33db59f2cb01d0d4e428c53d204d15f4e924eb241f802ff2c08d0136a2c827f"
     end
     on_intel do
-      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.2.1/ghdeck-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f653b7cc032b20d0779abb29e169b9a4663bc46bce1cc452e36a334898644beb"
+      url "https://github.com/jitendravjh/ghdeck/releases/download/v0.1.0/ghdeck-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "66bbe7bab788c2ee2a535d0128010a562832a3747ac4daf2cba936d477f8edd1"
     end
   end
 
