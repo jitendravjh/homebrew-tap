@@ -5,23 +5,23 @@ class Ghwork < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.1/ghwork-aarch64-apple-darwin.tar.gz"
-      sha256 "caf63fcd7334057981d1f03b49aacb8881f1caa0a9c3cb01cadaca4509d814b5"
+      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.2/ghwork-aarch64-apple-darwin.tar.gz"
+      sha256 "2625fe114a48274d4617940515915ba02305b0e4b31bd7d8f4c2e7ba9a589f20"
     end
     on_intel do
-      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.1/ghwork-x86_64-apple-darwin.tar.gz"
-      sha256 "019831767665be0e865685c838b6b85a3357b746b60096a027e1324291215ef8"
+      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.2/ghwork-x86_64-apple-darwin.tar.gz"
+      sha256 "159b4f7ee12e18f2d992fc42717481ff425dd66fc34b46f7384e977f2497b83d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.1/ghwork-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "bf61cf4b4989ebfbe137c5ca92f39f90f786d24909b83f500c33ded09a26c5d9"
+      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.2/ghwork-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "59c56156ac54aa73cab4976c5288ccb00ba19f3d6397fb17a1decc31448a2c43"
     end
     on_intel do
-      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.1/ghwork-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "d7153c60c0aefe8454ba646071368f4fb5a7545b6a1f56628779005d47e20d36"
+      url "https://github.com/jitendravjh/ghwork/releases/download/v0.1.2/ghwork-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "d3a5c1237a7f0dc0268c88721439fac7092a4b8fe24e221bb8ee49f3899f424b"
     end
   end
 
