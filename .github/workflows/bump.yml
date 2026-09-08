@@ -1,0 +1,36 @@
+name: bump ghwork
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Work out the latest release
+        id: latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "tag=$(gh release view --repo jitendravjh/ghwork --json tagName -q .tagName)" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild the formula
+        run: |
+          bash script/formula.sh "${{ steps.latest.outputs.tag }}" > Formula/ghwork.rb
+
+      - name: Commit if it changed
+        run: |
+          if git diff --quiet Formula/ghwork.rb; then
+            echo "already on ${{ steps.latest.outputs.tag }}"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "ghwork ${{ steps.latest.outputs.tag }}" Formula/ghwork.rb
+          git push
